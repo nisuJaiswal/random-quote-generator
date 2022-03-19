@@ -1,3 +1,6 @@
+This is website that generates any random quote along with its author.
+I have created this using REACT and its part of freeCodeCamp Project.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
