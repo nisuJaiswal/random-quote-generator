@@ -27,17 +27,18 @@ function App() {
     '#77B1A9',
     '#73A857'
   ];
-  useEffect(async () => {
 
+  const handleChange = async () => {
     var singleColor = colors[Math.floor(Math.random() * colors.length)];
     setColor(singleColor)
 
     const res = await fetch("https://type.fit/api/quotes")
     const data = await res.json();
     setQuote(data[Math.floor(Math.random() * data.length)])
-    // fetch('https://zenquotes.io/api/random')
-    //   .then(response => response.json())
-    //   .then(data => console.log(data))
+  }
+
+  useEffect(async () => {
+    handleChange();
 
   }, [])
 
@@ -56,7 +57,7 @@ function App() {
           <a href="" id="tweet-quote" style={bgStyle}>
             <i class="fa fa-twitter" aria-hidden="true" ></i>
           </a>
-          <button id="new-quote" style={bgStyle}>
+          <button id="new-quote" onClick={handleChange} style={bgStyle}>
             New Quote
           </button>
         </div>
