@@ -54,7 +54,7 @@ function App() {
           - <span>{quote.author}</span>
         </div>
         <div className="thirdRow">
-          <a href="" id="tweet-quote" style={bgStyle}>
+          <a href="https://twitter.com" target="_blank" id="tweet-quote" style={bgStyle}>
             <i class="fa fa-twitter" aria-hidden="true" ></i>
           </a>
           <button id="new-quote" onClick={handleChange} style={bgStyle}>
